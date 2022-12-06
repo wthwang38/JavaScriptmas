@@ -25,7 +25,15 @@ Read about toDateString() for info on formatting a readable date.
 
 */
 function transformData(data) {
-
+    let newArray = data.map((item) => {
+        let newDate = new Date(item.dob.date)
+        let bdayFormatted = newDate.toDateString()
+        return {
+            fullName: `${item.name.first} ${item.name.last}`,
+            birthday: `${bdayFormatted}`
+        }
+    })
+    return newArray
 }
 
 console.log(transformData(userData));
