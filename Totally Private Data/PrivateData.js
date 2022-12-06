@@ -1,6 +1,8 @@
 import userData from "./data.js";
 
-/* Totally Private Data Farm 
+/* 
+JavaScriptmas from Scrimba Day 2
+Totally Private Data Farm 
 
 Good news, renown advertising firm Evil Corp. wants to purchase our 
 private user data! 
