@@ -1,19 +1,28 @@
 /* 
 JavaScriptmas from Scrimba Day 4
-Whispering function 
-Write a function `whisper` that takes in a sentence 
+Whispering function
+Write a function `whisper` that takes in a sentence
 and returns a new sentence in all lowercase letters with
-"shh..." at the beginning. 
+"shh..." at the beginning.
 
 The function should also remove an exclamation point
-at the end of the sentence, if there is one. 
+at the end of the sentence, if there is one.
 
-Example 
+Example
 input: "The KITTENS are SLEEPING!"
 output: "shh... the kittens are sleeping"
 
 Hint: endsWith and slice
 */
+function whisper(s) {
+    let lowerString = s.toLowerCase()
+    let last = s.length - 1
 
+    if (lowerString[last] === '!') {
+        let newString = lowerString.slice(0, -1)
+        return newString;
+    }
+    return lowerString;
+}
 console.log(whisper("PLEASE STOP SHOUTING."));
 console.log(whisper("MA'AM, this is a Wendy's!"));
