@@ -18,5 +18,11 @@ import products from "./data.js";
 */
 
 function getSaleItems(data) {
-
+    let items = data.filter((item) => item.type === "sweet")
+    let shoppingCart = items.map((item) => `[
+        {item: ${item.item}, price: ${item.price}}
+        ]`)
+    return shoppingCart
 };
+
+console.log(getSaleItems(products))
