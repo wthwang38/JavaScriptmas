@@ -1,6 +1,7 @@
 import products from "./data.js";
 
 /*
+JavaScriptmas from Scrimba Day 5
    It's the day after Halloween 🎃 and all the candy is on sale!
    
    To buy up all the candy, use map() and filter() to put all the
