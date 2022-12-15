@@ -12,8 +12,12 @@ function getRandomNumberOfTacos() {
         - new Array()
         - Array.fill()
     */
-
-    return ['Empty Tray'] // replace this empty tray array
+    let min = Math.min(1)
+    let max = Math.max(10)
+    let random = Math.floor(Math.random() * (max - min) + min)
+    console.log(random)
+    let arr = new Array(random).fill("🌮")
+    return [arr] // replace this empty tray array
 
 }
 
