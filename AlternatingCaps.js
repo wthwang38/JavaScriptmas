@@ -7,7 +7,14 @@ Example output: "I'M So hApPy iT'S MoNdAy"
 */
 
 function altCaps(str) {
-    return newStr;
+    let newStr = str.split("")
+    for (let i = 0; i < newStr.length; i++) {
+        if (i % 2 === 0) {
+            newStr[i] = newStr[i].toUpperCase()
+        }
+    }
+    return newStr.join('');
 }
+
 
 console.log(altCaps("When you visit Portland you have to go to VooDoo Donuts"));
