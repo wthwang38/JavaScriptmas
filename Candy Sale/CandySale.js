@@ -11,19 +11,17 @@ JavaScriptmas from Scrimba Day 5
    this: 
    
    Expected output: 
-   [
-       {item: "🍭", price: 2.99},
-       {item: "🍫", price: 1.99}, 
-       {item: "🍬", price: 0.89}
+   [{item: "🍭", price: 2.99},{item: "🍫", price: 1.99}, {item: "🍬", price: 0.89}
     ]
 */
 
 function getSaleItems(data) {
     let items = data.filter((item) => item.type === "sweet")
-    let shoppingCart = items.map((item) => `[
-        {item: ${item.item}, price: ${item.price}}
-        ]`)
-    return shoppingCart
-};
+    let shoppingCart = items.map((item) => {
+        return {
+            item: `${item.item}`,
+            price: `${item.price}`
+        }
+    })}
 
 console.log(getSaleItems(products))
